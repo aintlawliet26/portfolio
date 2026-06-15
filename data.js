@@ -8,9 +8,9 @@ const siteData = {
 
     typing: [
       "Minecraft Developer",
-      "Server Optimizer",
-      "Plugin Configurator",
-      "SMP Systems Builder"
+      "Server Optimization",
+      "Plugin Configuration",
+      "Custom Plugins"
     ]
   },
 
