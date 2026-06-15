@@ -19,6 +19,10 @@
   --cyan-soft: rgba(103, 232, 249, 0.08);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   background:
@@ -30,6 +34,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 46px 20px;
+  animation: pageFadeIn 700ms ease both;
 }
 
 body::before {
@@ -42,6 +47,7 @@ body::before {
     linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, black, transparent 70%);
+  animation: gridFloat 12s linear infinite;
 }
 
 #app {
@@ -80,6 +86,10 @@ i {
     radial-gradient(circle at 95% 100%, rgba(103, 232, 249, 0.08), transparent 30%);
 }
 
+.opening-card {
+  animation: openingPop 850ms ease both;
+}
+
 .profile {
   display: flex;
   align-items: center;
@@ -96,6 +106,12 @@ i {
   flex-shrink: 0;
   box-shadow: 0 0 30px rgba(30, 144, 255, 0.18);
   z-index: 1;
+  transition: 0.25s ease;
+}
+
+.profile:hover .profile-photo-wrap {
+  transform: rotate(-2deg) scale(1.03);
+  box-shadow: 0 0 38px rgba(30, 144, 255, 0.28);
 }
 
 .profile-photo {
@@ -167,6 +183,7 @@ i {
   border-color: var(--blue);
   color: var(--cyan);
   background: rgba(30, 144, 255, 0.14);
+  transform: translateY(-1px);
 }
 
 .divider {
@@ -252,6 +269,13 @@ i {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  transition: 0.2s ease;
+}
+
+.about-chip:hover {
+  border-color: var(--blue);
+  color: var(--cyan);
+  transform: translateY(-1px);
 }
 
 .about-chip i {
@@ -272,14 +296,17 @@ i {
   padding: 14px;
   text-decoration: none;
   color: inherit;
-  transition: 0.2s ease;
+  transition: 0.22s ease;
+}
+
+.list-item:hover {
+  transform: translateY(-2px);
 }
 
 .list-item.clickable:hover {
   border-color: var(--blue);
   background:
     linear-gradient(135deg, var(--blue-soft), rgba(8, 9, 10, 0.92));
-  transform: translateY(-2px);
 }
 
 .list-item.clickable:hover .item-info p,
@@ -349,6 +376,11 @@ i {
   border-bottom: 1px solid var(--line);
   padding: 16px;
   font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.service-row:hover {
+  background: rgba(30, 144, 255, 0.055);
 }
 
 .service-row:last-child {
@@ -435,11 +467,6 @@ i {
   transition: 0.2s ease;
 }
 
-.contact-button.secondary {
-  border-color: var(--line-bright);
-  background: rgba(30, 144, 255, 0.08);
-}
-
 .contact-button:hover {
   box-shadow: 0 0 26px rgba(30, 144, 255, 0.22);
   transform: translateY(-2px);
@@ -452,6 +479,38 @@ i {
   color: var(--faint);
   font-size: 12px;
   text-align: center;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes openingPop {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes gridFloat {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 42px 42px;
+  }
 }
 
 @media (max-width: 560px) {

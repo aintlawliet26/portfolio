@@ -24,7 +24,7 @@ function renderProfile() {
   const profile = siteData.profile;
 
   return `
-    <header class="profile card glow-card">
+    <header class="profile card glow-card opening-card" data-aos="zoom-in" data-aos-duration="750">
       <div class="profile-photo-wrap">
         <img class="profile-photo" src="${profile.photo}" alt="${profile.name} profile photo">
       </div>
@@ -61,7 +61,7 @@ function renderAbout() {
   }).join("");
 
   return `
-    <section class="section">
+    <section class="section" data-aos="fade-up">
       <h2 class="section-title">${icon("fa-solid fa-user-astronaut")} ABOUT ME</h2>
 
       <div class="about-box card">
@@ -86,7 +86,7 @@ function renderAbout() {
 function renderList(title, items, sectionIcon) {
   if (!items || !items.length) return "";
 
-  const rows = items.map((item) => {
+  const rows = items.map((item, index) => {
     const content = `
       ${createImageHTML(item)}
       <div class="item-info">
@@ -96,16 +96,18 @@ function renderList(title, items, sectionIcon) {
       <div class="item-arrow">${icon(item.link ? "fa-solid fa-arrow-up-right-from-square" : "fa-solid fa-circle-minus")}</div>
     `;
 
+    const delay = index * 80;
+
     if (item.link) {
       return `
-        <a class="list-item clickable card" href="${item.link}" target="_blank" rel="noopener noreferrer">
+        <a class="list-item clickable card" href="${item.link}" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="${delay}">
           ${content}
         </a>
       `;
     }
 
     return `
-      <div class="list-item card">
+      <div class="list-item card" data-aos="fade-up" data-aos-delay="${delay}">
         ${content}
       </div>
     `;
@@ -113,7 +115,7 @@ function renderList(title, items, sectionIcon) {
 
   return `
     <section class="section">
-      <h2 class="section-title">${icon(sectionIcon)} ${title}</h2>
+      <h2 class="section-title" data-aos="fade-right">${icon(sectionIcon)} ${title}</h2>
       <div class="list">
         ${rows}
       </div>
@@ -126,9 +128,9 @@ function renderServices() {
 
   if (!services || !services.length) return "";
 
-  const rows = services.map((service) => {
+  const rows = services.map((service, index) => {
     return `
-      <div class="service-row">
+      <div class="service-row" data-aos="fade-up" data-aos-delay="${index * 70}">
         <div class="service-name">
           <span class="service-icon">${icon(service.icon)}</span>
           <span>${service.name}</span>
@@ -140,7 +142,7 @@ function renderServices() {
 
   return `
     <section class="section">
-      <h2 class="section-title">${icon("fa-solid fa-handshake-angle")} SERVICES</h2>
+      <h2 class="section-title" data-aos="fade-right">${icon("fa-solid fa-handshake-angle")} SERVICES</h2>
       <div class="services card">
         ${rows}
       </div>
@@ -154,7 +156,7 @@ function renderContact() {
   if (!contact) return "";
 
   return `
-    <section class="section">
+    <section class="section" data-aos="fade-up">
       <h2 class="section-title">${icon("fa-solid fa-message")} ${contact.title}</h2>
 
       <div class="contact-box card glow-card">
@@ -167,11 +169,6 @@ function renderContact() {
             <a class="contact-button" href="${contact.profileLink}" target="_blank" rel="noopener noreferrer">
               ${icon("fa-solid fa-paper-plane")}
               ${contact.profileButtonText}
-            </a>
-
-            <a class="contact-button secondary" href="${contact.serverLink}" target="_blank" rel="noopener noreferrer">
-              ${icon("fa-solid fa-right-to-bracket")}
-              ${contact.serverButtonText}
             </a>
           </div>
         </div>
@@ -186,7 +183,7 @@ function renderFooter() {
   if (!footer) return "";
 
   return `
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
       <p>${footer.credit}</p>
     </footer>
   `;
@@ -212,6 +209,17 @@ function startTypingAnimation() {
   typingTarget.textContent = siteData.profile.typing[0] || "Minecraft Developer";
 }
 
+function startScrollAnimation() {
+  if (window.AOS) {
+    AOS.init({
+      once: true,
+      duration: 650,
+      easing: "ease-out-cubic",
+      offset: 80
+    });
+  }
+}
+
 function renderApp() {
   app.innerHTML = `
     ${renderProfile()}
@@ -224,6 +232,7 @@ function renderApp() {
   `;
 
   startTypingAnimation();
+  startScrollAnimation();
 }
 
 renderApp();

@@ -95,12 +95,10 @@ const siteData = {
 
   contact: {
     title: "How to Contact",
-    text: "For Minecraft server development, setup, optimization, plugin configuration, or bug fixing inquiries, you can message me directly or join my Discord server.",
+    text: "For Minecraft server development, setup, optimization, plugin configuration, or bug fixing inquiries, you can message me directly on Discord.",
     discord: "@aintlawliet",
     profileButtonText: "Message me on Discord",
-    profileLink: "https://discord.com/users/421413013783052298",
-    serverButtonText: "Join on my Discord Server",
-    serverLink: "https://discord.gg/YkdMxwBajM"
+    profileLink: "https://discord.com/users/421413013783052298"
   },
 
   footer: {
