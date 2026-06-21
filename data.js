@@ -69,17 +69,17 @@ const siteData = {
     {
       icon: "fa-solid fa-bolt",
       name: "Server Optimization",
-      price: "₱800 – ₱1,500"
+      price: "₱400 – ₱1,500"
     },
     {
       icon: "fa-solid fa-puzzle-piece",
       name: "Plugin Development",
-      price: "₱2,000 – ₱4,500"
+      price: "₱1,000 – ₱5,000"
     },
     {
       icon: "fa-solid fa-screwdriver-wrench",
       name: "Minecraft Server Setup",
-      price: "₱3,000 – ₱4,500"
+      price: "₱2,500 – ₱4,500"
     },
     {
       icon: "fa-solid fa-bug",
