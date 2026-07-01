@@ -39,16 +39,16 @@ const siteData = {
     {
       title: "Owner",
       years: "2020–2021",
-      name: "Bayanihan SMP — Discontinue",
-      image: "https://media.discordapp.net/attachments/1514145208772726894/1515919675731742780/d306db96-32e5-4acc-aeda-7f8992f36672.png?ex=6a30c1b7&is=6a2f7037&hm=00aae7cf75cfae5e1d73343f30a481624bcc239c75fe7f0b9efae54a571f9890&=&format=webp&quality=lossless&width=856&height=856",
+      name: "Bayanihan SMP — Shutdown",
+      image: "https://www.dropbox.com/scl/fi/vuth9o108cz6c7gr31crz/d306db96-32e5-4acc-aeda-7f8992f36672.png?rlkey=pske9q48knmoxghcdj1jxcvzv&st=zz7101ts&dl=1",
       fallback: "BAY\nSMP",
       link: ""
     },
     {
       title: "Owner",
       years: "2022–2023",
-      name: "Maharlika SMP — Discontinue",
-      image: "https://media.discordapp.net/attachments/1514145208772726894/1515919675316240495/d7e996a8-1021-411d-8ffd-1011be990745.png?ex=6a30c1b7&is=6a2f7037&hm=c644016d22b928493b68a1c335a6a2007ca3a30c877f189f22b28ed20d42c7ff&=&format=webp&quality=lossless&width=856&height=856",
+      name: "Maharlika SMP — Shutdown",
+      image: "https://www.dropbox.com/scl/fi/zuztiot63zghm8clfqpi6/d7e996a8-1021-411d-8ffd-1011be990745.png?rlkey=h666x2vlxb2zh330f1jndoco1&st=48ch6tlj&dl=1",
       fallback: "MHR\nSMP",
       link: ""
     }
@@ -59,7 +59,7 @@ const siteData = {
       title: "Developer",
       years: "2026",
       name: "Inferlume SMP",
-      image: "https://media.discordapp.net/attachments/1514145208772726894/1514880471476207636/ChatGPT_Image_Jun_10_2026_08_27_27_PM.png?ex=6a3045a1&is=6a2ef421&hm=c73edf55550ef66995cc2da4e56f64c68716a8db254b41f56a7712bd49c1e7ab&=&format=webp&quality=lossless&width=960&height=960",
+      image: "https://www.dropbox.com/scl/fi/4lzhhojalxme365zwdsmj/ChatGPT_Image_Jun_10_2026_08_27_27_PM.png?rlkey=unj2qgych7mwbhreuzryeyr8r&st=1qnljgvo&dl=1",
       fallback: "INF\nSMP",
       link: "https://discord.gg/pfZqjtPA9"
     }
