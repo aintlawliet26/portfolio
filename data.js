@@ -4,7 +4,7 @@ const siteData = {
     role: "23 years old - Minecraft Developer",
     discord: "@aintlawliet",
     discordLink: "https://discord.com/users/421413013783052298",
-    photo: "https://media.discordapp.net/attachments/1514142378620096562/1515927249189077032/ChatGPT_Image_Jun_15_2026_11_53_29_AM.png?ex=6a30c8c4&is=6a2f7744&hm=be1595b8c30a1505ca2e50785c0c382e6c08cea06a3f90b95083ac146ca19512&=&format=webp&quality=lossless&width=960&height=960",
+    photo: "https://www.dropbox.com/scl/fi/65mwegiux3osnky5itt0h/ChatGPT_Image_Jun_15_2026_11_53_29_AM.png?rlkey=95efkywry39ojn85s5yf0s536&st=diad0nef&dl=1",
 
     typing: [
       "Minecraft Developer",
